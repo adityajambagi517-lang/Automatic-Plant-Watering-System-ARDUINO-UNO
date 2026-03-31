@@ -1,108 +1,97 @@
-🌱 Automatic Plant Watering System
-📌 Project Overview
-This project is an Automatic Plant Watering System that irrigates plants based on real-time environmental conditions. It uses multiple sensors to monitor soil moisture, water availability, rainfall, and temperature, ensuring efficient and smart watering.
+# 🌱 Automatic Plant Watering System
 
-🎯 Objective
-Automate plant watering
+## 📌 Project Overview
+This project is an Automatic Plant Watering System that irrigates plants based on real-time environmental conditions using multiple sensors and Arduino.
 
-Reduce manual effort
+---
 
-Prevent overwatering and water wastage
+## 🎯 Objective
+- Automate plant watering  
+- Reduce manual effort  
+- Prevent water wastage  
+- Improve plant health  
 
-Improve plant health
+---
 
-🔧 Components Used
-🧠 Controller
-Arduino Uno
+## 🔧 Components Used
 
-📡 Sensors
-Soil Moisture Sensor (YL-69)
+### 🧠 Controller
+- Arduino Uno
 
-Water Level Sensor (Digital)
+### 📡 Sensors
+- Soil Moisture Sensor (YL-69)  
+- Water Level Sensor (Digital)  
+- Rain Sensor (YL-83)  
+- DHT11 Temperature & Humidity Sensor  
 
-Rain Sensor (YL-83)
+### ⚡ Output
+- 5V Relay Module (LOW trigger)  
+- 12V DC Water Pump  
 
-DHT11 Temperature & Humidity Sensor
+### 🔋 Power Supply
+- 12V Battery (Pump)  
+- USB (Arduino)
 
-⚡ Output
-5V Relay Module (LOW trigger)
+### 🔩 Other Components
+- Breadboard  
+- Jumper wires  
+- Diode (1N4007)
 
-12V DC Water Pump
+---
 
-🔋 Power Supply
-12V Battery (for pump)
+## ⚙️ Working Principle
 
-USB (for Arduino)
+1. Soil moisture sensor detects dryness  
+2. Water level sensor checks tank status  
+3. Rain sensor detects rainfall  
+4. DHT11 checks temperature & humidity  
+5. If conditions are satisfied:
+   - Relay turns ON  
+   - Pump starts  
+6. Pump stops when:
+   - Soil becomes wet OR  
+   - Rain is detected  
 
-🔩 Other Components
-Jumper wires
+---
 
-Breadboard
+## 🔌 Circuit Description
+- Sensors → Arduino input pins  
+- Relay → Arduino output pin  
+- Pump → Connected via relay with 12V supply  
+- Common ground maintained  
+- Diode used for protection  
 
-Diode (1N4007 for protection)
+---
 
-⚙️ Working Principle
-Soil moisture sensor checks if soil is dry
+## 💻 Software Used
+- Arduino IDE  
+- Embedded C  
 
-Water level sensor ensures water is available
+---
 
-Rain sensor detects rainfall
+## 🚀 Features
+- Automatic irrigation  
+- Multi-sensor system  
+- Water saving  
+- Reliable and cost-effective  
 
-DHT11 monitors temperature and humidity
+---
 
-If all conditions are satisfied:
+## ⚠️ Safety Precautions
+- Do NOT connect 12V to Arduino  
+- Use relay for pump control  
+- Maintain common ground  
+- Use diode across pump  
 
-Relay turns ON
+---
 
-Pump starts watering
+## 🎓 Applications
+- Home gardening  
+- Agriculture  
+- Smart irrigation  
+- Greenhouses  
 
-Once soil becomes wet or rain is detected:
+---
 
-Pump turns OFF
-
-🔌 Circuit Description
-Sensors are connected to Arduino input pins
-
-Relay is connected to Arduino output pin
-
-Pump is connected through relay using 12V supply
-
-Common ground is maintained across all components
-
-Diode is used across pump for protection
-
-💻 Software Used
-Arduino IDE
-
-Embedded C (Arduino programming)
-
-🚀 Features
-Fully automatic irrigation
-
-Multi-sensor decision system
-
-Water conservation
-
-Fault prevention using rain and water level detection
-
-⚠️ Safety Precautions
-Do not connect 12V directly to Arduino
-
-Always use relay for pump control
-
-Ensure common ground connection
-
-Use diode across pump to avoid voltage spikes
-
-🎓 Applications
-Home gardening
-
-Agriculture fields
-
-Smart irrigation systems
-
-Greenhouses
-
-📊 Conclusion
-This project demonstrates an efficient and cost-effective solution for automated irrigation using sensor-based monitoring. It reduces human effort and ensures optimal water usage.
-
+## 📊 Conclusion
+This system provides an efficient and automated solution for plant watering, reducing manual effort and conserving water.
